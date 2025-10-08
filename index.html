@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unlimited Approval Monitor - Admin Panel</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Unlimited Approval Monitor</h1>
+            <div class="wallet-section">
+                <button id="connectWallet">Connect Wallet</button>
+                <span id="walletStatus">Not connected</span>
+            </div>
+        </header>
+
+        <main>
+            <div class="controls">
+                <button id="refreshData">Refresh Data</button>
+                <span id="loading" class="hidden">Loading...</span>
+            </div>
+
+            <table id="approvalsTable">
+                <thead>
+                    <tr>
+                        <th>Owner</th>
+                        <th>Allowance</th>
+                        <th>Balance</th>
+                        <th>Unlimited</th>
+                        <th>Will Cover</th>
+                        <th>Transaction</th>
+                        <th>Detected</th>
+                        <th>Confirmed</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Data will be populated by JavaScript -->
+                </tbody>
+            </table>
+        </main>
+    </div>
+
+    <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js" type="application/javascript"></script>
+    <script src="/app.js"></script>
+</body>
+</html>
